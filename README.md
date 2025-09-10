@@ -1235,3 +1235,10 @@ requests
 python-telegram-bot
 ```
 </details>
+
+## ⚠️ Disclaimer and Ethical Warning
+This project and its accompanying tools were created for educational and research purposes only. The goal is to demonstrate and understand the vulnerabilities in the MQTT protocol to build better defense mechanisms.
+
+Using any of the included attack scripts to test or attack systems that you do not own or do not have explicit, written permission to test is illegal and considered a cybercrime.
+
+The authors and contributors of this project disclaim all liability and are not responsible for any damage or misuse of these tools. We encourage using the knowledge gained from this project to enhance security defenses and contribute to building a safer digital environment.
