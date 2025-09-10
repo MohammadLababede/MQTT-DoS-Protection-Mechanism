@@ -1,0 +1,22 @@
+[Unit]
+Description=Mosquitto Protector Service
+# This ensures the service starts after the network and mosquitto broker are ready
+After=network.target mosquitto.service
+BindsTo=mosquitto.service
+
+
+[Service]
+# The script needs root privileges for iptables
+User=root
+
+#ExecStartPre=/bin/sh -c 'systemctl is-active --quiet mosquitto.service'
+# IMPORTANT: Replace the path below with the actual, absolute path to your script
+ExecStart=/usr/bin/python3 /usr/local/bin/MQTTDosProtected.py
+
+# Automatically restart the service if it fails
+Restart=on-failure
+RestartSec=5
+
+[Install]
+# This makes the service start on boot
+WantedBy=multi-user.target
